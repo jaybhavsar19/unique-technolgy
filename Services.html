@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Opengate Technologies</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #00285a;
+            --secondary-blue: #1e3a6c;
+            --accent-teal: #20b2aa;
+            --light-bg: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            padding: 0.8rem 0;
+        }
+
+        .navbar .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: #333 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link.active,
+        .navbar .nav-link:hover {
+            color: var(--accent-teal) !important;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+
+        /* Buttons */
+        .btn-primary-teal {
+            background-color: var(--accent-teal);
+            border-color: var(--accent-teal);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-teal:hover {
+            background-color: #1a8e8e;
+            border-color: #1a8e8e;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 150vh;
+            background: url(/Img/hero\ 2.png) no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: var(--light-bg);
+            border: none;
+            border-radius: 10px;
+            padding: 2rem;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, border-left 0.2s ease;
+            border-left: 5px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-left-color: var(--accent-teal);
+        }
+
+        .icon-circle {
+            background: var(--accent-teal);
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h5 {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        /* Fast Track Section */
+        .bg-secondary-blue {
+            background-color: var(--secondary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1b3d;
+            color: #fff;
+        }
+
+        footer h5 {
+            font-weight: 600;
+        }
+
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-social-icon {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social-icon:hover {
+            color: var(--accent-teal);
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 80vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <img src="/Img/logo-removebg-preview.png" alt="Unique Technology Logo" class="logo-img me-2">
+                <span class="fw-bold text-dark">Unique Technology</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/WhyChooseUs.html">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Hired.html">Get Hired</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Privacy_policy.html">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="display-4 fw-bold">Our Candidate Career Support Process</h1>
+            <p class="lead">We guide you through every step of your job search journey, from strategy to placement.</p>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-blue">Our Services</h2>
+                <p class="lead text-secondary">A step-by-step approach to help you land your dream job.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-route"></i></div>
+                        <h5>One-on-One Career Roadmap</h5>
+                        <p class="text-muted">We build a customized career plan based on your skills and goals,
+                            identifying job
+                            titles and technologies that fit your journey.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-id-card-alt"></i></div>
+                        <h5>Resume & Profile Rebranding</h5>
+                        <p class="text-muted">We optimize your resume, LinkedIn, and profiles with ATS-friendly
+                            formatting and
+                            recruiter-focused keywords.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-graduation-cap"></i></div>
+                        <h5>Technical Readiness & Mentorship</h5>
+                        <p class="text-muted">Our experts train you on real-world concepts and interview questions to
+                            close skill
+                            gaps and boost confidence.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-search"></i></div>
+                        <h5>Curated Job Application Campaigns</h5>
+                        <p class="text-muted">We apply on your behalf with a focused, high-volume strategy across job
+                            boards,
+                            LinkedIn, and networks.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-headset"></i></div>
+                        <h5>Live Interview Support</h5>
+                        <p class="text-muted">We provide mock interviews, real-time guidance, and coaching to help you
+                            excel in
+                            technical and behavioral interviews.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-handshake"></i></div>
+                        <h5>Offer Finalization & Paperwork</h5>
+                        <p class="text-muted">We help with salary negotiations, background checks, and onboarding to
+                            make your
+                            transition smooth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fast Track -->
+    <section class="py-5 bg-secondary-blue text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Fast-Track Placement Approach</h2>
+            <p class="lead">Our process is time-sensitive and results-driven. We streamline every step from training to
+                placement, aiming to secure your job within weeks.</p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact" class="pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>About Unique Technology</h5>
+                    <p class="text-muted">We provide technology & administrative outsourcing solutions, empowering
+                        businesses
+                        worldwide.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/Services.html" class="footer-link">Services</a></li>
+                        <li><a href="/WhyChooseUs.html" class="footer-link">Why Us</a></li>
+                        <li><a href="/Hired.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Blvd, Suite 101, Anytown, USA</p>
+                    <p><i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@uniquetech.com</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-light">
+            <p class="text-center text-muted mb-0">&copy; 2025 Unique Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

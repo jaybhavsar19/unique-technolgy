@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO & Responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Unique Technology - Your trusted global partner for staffing, automation, digital marketing, and business solutions.">
+    <meta name="keywords"
+        content="staffing, digital marketing, automation, engineering, outsourcing, Unique Technology">
+    <meta name="author" content="Unique Technology">
+
+    <title>Unique Technology - Your Global Career Partner</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-blue: #00285a;
+            --secondary-blue: #1e3a6c;
+            --accent-teal: #20b2aa;
+            --light-bg: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            padding: 0.8rem 0;
+        }
+
+        .navbar .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: #333 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link.active,
+        .navbar .nav-link:hover {
+            color: var(--accent-teal) !important;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url("/Img/hero\ scation\ home\ 1.png") center/cover no-repeat;
+
+            height: 130vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        /* Buttons */
+        .btn-primary-teal {
+            background-color: var(--accent-teal);
+            border: none;
+            padding: 12px 28px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-teal:hover {
+            background-color: #178c8c;
+            transform: translateY(-2px);
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            font-weight: 300;
+            border-left: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--accent-teal);
+        }
+
+        .icon-circle {
+            background: var(--accent-teal);
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .service-card h5 {
+            color: var(--primary-blue);
+
+        }
+
+        /* Clients */
+        .client-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            max-height: 50px;
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* Counter Section */
+        .counter-box {
+            background: var(--secondary-blue);
+            border-radius: 8px;
+            padding: 30px;
+            color: #fff;
+        }
+
+        .counter-box h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1b3d;
+            color: #fff;
+        }
+
+        footer h5 {
+            font-weight: 600;
+        }
+
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-social-icon {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social-icon:hover {
+            color: var(--accent-teal);
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 80vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm ">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <img src="/Img/logo-removebg-preview.png" alt="Unique Technology Logo" class="logo-img me-2">
+                <span class="fw-bold text-dark">Unique Technology</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/WhyChooseUs.html">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Hired.html">Get Hired</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Privacy_policy.html">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-section ">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center">
+            <h1 class="display-4 fw-bold">Your Global Career Partner</h1>
+            <p class="lead mt-3">We help businesses grow by providing top-tier talent and innovative technology
+                solutions.</p>
+            <a href="/Hired.html" class="btn btn-primary-teal mt-4">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-blue">Our Services</h2>
+                <p class="text-muted">Explore our expertise across industries.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-user-tie"></i></div>
+                        <h5>Staffing Solutions</h5>
+                        <p>Skilled professionals for short or long-term staffing needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h5>Admin & Accounting</h5>
+                        <p>Bookkeeping, back-office, and administrative support services.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-industry"></i></div>
+                        <h5>Industrial Automation</h5>
+                        <p>Robotics and automation for optimized manufacturing processes.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-tools"></i></div>
+                        <h5>Design Engineering</h5>
+                        <p>CAD, product development, and expert engineering support.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-bullhorn"></i></div>
+                        <h5>Digital Marketing</h5>
+                        <p>Boosting online presence with data-driven marketing strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                        <h5>Placement Services</h5>
+                        <p>Helping professionals find careers and companies find talent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <h2 class="fw-bold text-center pt-5">Our Achievements</h2>
+    <marquee behavior="" direction="">
+        <section class="py-5 bg-secondary-blue text-white">
+            <div class="container text-center">
+                <div class="row g-4 align-items-center">
+                    <div class="col-6 col-md-4 col-lg-2"><img src="/Img/amazon-logo.png" class="client-logo img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2"><img src="/Img/fedex-logo.png" class="client-logo img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2"><img src="/Img/google-logo.jpg" class="client-logo img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2"><img src="Img/prada-logo.png" class="client-logo img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2"><img src="Img/shell-logo.png   " class="client-logo img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2"><img src="Img/mobil-logo-content.jpg"
+                            class="client-logo img-fluid"></div>
+                </div>
+            </div>
+        </section>
+    </marquee>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold text-primary-blue mb-4">Why Choose Us</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h5>Affordable Rates</h5>
+                        <p>Competitive pricing that ensures maximum value.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-headset"></i></div>
+                        <h5>24/7 Assistance</h5>
+                        <p>Always available support team for your needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-circle"><i class="fas fa-star"></i></div>
+                        <h5>Top Talent</h5>
+                        <p>Only the best professionals through rigorous screening.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter -->
+    <h2 class="fw-bold text-center pt-5">We Deliver Results</h2>
+
+    <section class="py-5 bg-primary-blue text-white">
+
+        <div class="container text-center">
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 data-target="70">0</h3>
+                        <p>Clients</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 data-target="100">0</h3>
+                        <p>Placements</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 data-target="80">0</h3>
+                        <p>Projects</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-box">
+                        <h3 data-target="82">0</h3>
+                        <p>Retention Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>About Unique Technology</h5>
+                    <p class="text-muted">We provide technology & administrative outsourcing solutions, empowering
+                        businesses
+                        worldwide.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/Services.html" class="footer-link">Services</a></li>
+                        <li><a href="/WhyChooseUs.html" class="footer-link">Why Us</a></li>
+                        <li><a href="/Hired.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Blvd, Suite 101, Anytown, USA</p>
+                    <p><i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@uniquetech.com</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-light">
+            <p class="text-center text-muted mb-0">&copy; 2025 Unique Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Counter Animation -->
+    <script>
+        const animateCounter = (el) => {
+            const target = +el.getAttribute("data-target");
+            let current = 0;
+            const increment = target / 100;
+            const update = () => {
+                current += increment;
+                if (current < target) {
+                    el.innerText = Math.ceil(current);
+                    requestAnimationFrame(update);
+                } else {
+                    el.innerText = target;
+                }
+            };
+            update();
+        };
+
+        const counters = document.querySelectorAll("[data-target]");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(c => animateCounter(c));
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.querySelector(".counter-box"));
+    </script>
+</body>
+
+</html>

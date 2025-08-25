@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us - Opengate Technologies</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #00285a;
+            --secondary-blue: #1e3a6c;
+            --accent-teal: #20b2aa;
+            --light-bg: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            padding: 0.8rem 0;
+        }
+
+        .navbar .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: #333 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link.active,
+        .navbar .nav-link:hover {
+            color: var(--accent-teal) !important;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        /* Section Title */
+        #why-us h2 {
+            font-weight: 700;
+            margin-top: 10%;
+            color: #0d1b3d;
+        }
+
+        #why-us p.lead {
+            color: whi;
+            font-size: 1.1rem;
+        }
+
+        /* Why Card */
+        .why-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .why-card h5 {
+            font-weight: 600;
+            color: #0d1b3d;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+
+            line-height: 1.5;
+        }
+
+        /* Last card highlight */
+        .why-card.text-center {
+            background: #0d1b3d;
+            color: #fff;
+        }
+
+        .why-card.text-center h5 {
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1b3d;
+            color: #fff;
+        }
+
+        footer h5 {
+            font-weight: 600;
+        }
+
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-social-icon {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social-icon:hover {
+            color: var(--accent-teal);
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 991px) {
+            .why-card {
+                padding: 20px;
+            }
+
+            .why-card h5 {
+                font-size: 1rem;
+            }
+
+            .why-card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #why-us h2 {
+                font-size: 1.6rem;
+            }
+
+            #why-us p.lead {
+                font-size: 1rem;
+            }
+
+            .why-card {
+                padding: 18px;
+            }
+
+            footer .row {
+                text-align: center;
+            }
+
+            footer .footer-social-icon {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <img src="/Img/logo-removebg-preview.png" alt="Unique Technology Logo" class="logo-img me-2">
+                <span class="fw-bold text-dark">Unique Technology</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/WhyChooseUs.html">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Hired.html">Get Hired</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Privacy_policy.html">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Why Choose Us</h2>
+                <p class="lead">We provide a structured, results-driven approach to ensure candidates succeed from
+                    strategy to placement.</p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Career Roadmap -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-card h-100">
+                        <h5>One-on-One Career Roadmap</h5>
+                        <p>We analyze your background, skills, and goals to build a customized roadmap—covering job
+                            titles, relevant technologies, and a job search timeline—helping you move with clarity and
+                            confidence.</p>
+                    </div>
+                </div>
+
+                <!-- Resume Rebranding -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card h-100">
+                        <h5>Resume & Profile Rebranding</h5>
+                        <p>We revamp resumes, LinkedIn profiles, and job board accounts with strong formatting, keyword
+                            optimization, and achievement highlights to maximize recruiter visibility and ATS success.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technical Readiness -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card h-100">
+                        <h5>Technical Readiness & Mentorship</h5>
+                        <p>Our mentors assess skills, close gaps through targeted training, and provide interview prep
+                            on real-world scenarios and commonly asked questions, ensuring you’re fully prepared.</p>
+                    </div>
+                </div>
+
+                <!-- Job Applications -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-card h-100">
+                        <h5>Curated Job Application Campaigns</h5>
+                        <p>We launch focused, high-volume job applications on your behalf—via LinkedIn, job boards, and
+                            networks—hand-picking roles that match your strengths and preferences.</p>
+                    </div>
+                </div>
+
+                <!-- Interview Support -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="why-card h-100">
+                        <h5>Live Interview Support</h5>
+                        <p>From mock interviews to real-time coaching, we help you confidently handle both technical and
+                            behavioral rounds, reducing stress and boosting performance.</p>
+                    </div>
+                </div>
+
+                <!-- Offer Support -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="why-card h-100">
+                        <h5>Offer Finalization & Paperwork</h5>
+                        <p>We support salary negotiations, compliance, and onboarding paperwork, ensuring smooth
+                            transitions and clear communication with employers.</p>
+                    </div>
+                </div>
+
+                <!-- Fast Track -->
+                <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+                    <div class="why-card h-100 text-center">
+                        <h5>Fast-Track Placement Approach</h5>
+                        <p class="mb-0">Our entire process is time-sensitive and results-driven. From training to
+                            placement, we prioritize speed without compromising quality, helping candidates secure jobs
+                            in weeks.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>About Unique Technology</h5>
+                    <p class="text-muted">We provide technology & administrative outsourcing solutions, empowering
+                        businesses worldwide.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/Services.html" class="footer-link">Services</a></li>
+                        <li><a href="/WhyChooseUs.html" class="footer-link">Why Us</a></li>
+                        <li><a href="/Hired.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> 123 Tech Blvd, Suite 101, Anytown, USA</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> info@uniquetech.com</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="footer-social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-light">
+            <p class="text-center text-muted mb-0">&copy; 2025 Unique Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+
+</html>

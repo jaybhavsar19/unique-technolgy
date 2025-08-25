@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Support Process</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #00285a;
+            --accent-teal: #20b2aa;
+
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            padding: 0.8rem 0;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: #333 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link.active,
+        .navbar .nav-link:hover {
+            color: var(--accent-teal) !important;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #00285a, #004aad);
+            color: #fff;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        .form-box {
+            background: #fff;
+
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-box h5 {
+            font-weight: 800;
+        }
+
+        .btn-danger {
+            background: linear-gradient(90deg, #ff512f, #dd2476);
+            border: none;
+        }
+
+        .btn-danger:hover {
+            opacity: 0.9;
+        }
+
+        /* Process */
+        .process {
+            background: var(--light-bg);
+        }
+
+        .step-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .step-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .step-number {
+            width: 55px;
+            height: 55px;
+            background: var(--primary-blue);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0, 40, 90, 0.4);
+        }
+
+        .step-box h5 {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 991px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding-top: 80px;
+                text-align: center;
+            }
+
+            .form-box {
+                margin-top: 30px;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1b3d;
+            color: #fff;
+        }
+
+        footer h5 {
+            font-weight: 600;
+        }
+
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-social-icon {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social-icon:hover {
+            color: var(--accent-teal);
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 80vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <img src="/Img/logo-removebg-preview.png" alt="Unique Technology Logo" class="logo-img me-2">
+                <span class="fw-bold text-dark">Unique Technology</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/WhyChooseUs.html">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Hired.html">Get Hired</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Privacy_policy.html">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text -->
+                <div class="col-lg-6 text-white">
+                    <h1 class="mb-4">Get Your Dream Job <br> Faster & Smarter</h1>
+                    <p class="mb-4">Join our Career Support Program and accelerate your hiring journey with expert
+                        mentorship, personalized training & curated job campaigns.</p>
+                    <a href="#process" class="btn btn-warning btn-lg">Explore Process</a>
+                </div>
+                <!-- Form -->
+                <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0">
+                    <div class="form-box">
+                        <h5 class="mb-3">Let's Get Started</h5>
+                        <form>
+                            <input type="text" class="form-control mb-3" placeholder="First Name *" required>
+                            <input type="text" class="form-control mb-3" placeholder="Last Name *" required>
+                            <input type="email" class="form-control mb-3" placeholder="Email *" required>
+                            <input type="tel" class="form-control mb-3" placeholder="Phone *" required>
+                            <button class="btn btn-danger w-100">Sign Me Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Our 7-Step Career Support Process</h2>
+            <div class="row g-4">
+                <div class="col-md-4 fade-in">
+                    <div class="step-box">
+                        <div class="step-number">1</div>
+                        <h5>Career Roadmap</h5>
+                        <p>Personalized path based on your skills & goals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="step-box">
+                        <div class="step-number">2</div>
+                        <h5>Resume & Branding</h5>
+                        <p>Optimized resume & LinkedIn profile to attract recruiters.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="step-box">
+                        <div class="step-number">3</div>
+                        <h5>Mentorship</h5>
+                        <p>Skill training + mock interviews for real-world readiness.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="step-box">
+                        <div class="step-number">4</div>
+                        <h5>Job Campaigns</h5>
+                        <p>Targeted applications to land interviews faster.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="step-box">
+                        <div class="step-number">5</div>
+                        <h5>Interview Support</h5>
+                        <p>Confidence coaching & real-time guidance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="step-box">
+                        <div class="step-number">6</div>
+                        <h5>Offer & Paperwork</h5>
+                        <p>Salary negotiation & smooth onboarding assistance.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 fade-in">
+                    <div class="step-box">
+                        <div class="step-number">7</div>
+                        <h5>Fast-Track Placement</h5>
+                        <p>Result-oriented approach ensuring quick hiring success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Contact Us</h2>
+            <p class="mb-4">Have questions? We're here to help you succeed.</p>
+            <a href="mailto:info@careerboost.com" class="btn btn-primary btn-lg">
+                <i class="bi bi-envelope-fill"></i> Email Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Unchanged) -->
+    <footer id="contact" class="pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>About Unique Technology</h5>
+                    <p class="text-muted">We provide technology & administrative outsourcing solutions, empowering
+                        businesses worldwide.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/Services.html" class="footer-link">Services</a></li>
+                        <li><a href="/WhyChooseUs.html" class="footer-link">Why Us</a></li>
+                        <li><a href="/Hired.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> 123 Tech Blvd, Suite 101, Anytown, USA</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> info@uniquetech.com</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="footer-social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-light">
+            <p class="text-center text-muted mb-0">&copy; 2025 Unique Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar color change on scroll
+        window.addEventListener("scroll", function () {
+            let nav = document.querySelector(".navbar");
+            nav.classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        // Scroll animations
+        document.addEventListener("scroll", () => {
+            document.querySelectorAll(".fade-in").forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    el.classList.add("show");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
